@@ -17,7 +17,7 @@ The **CACHELINES Field Intelligence & Beat Management System** is a mission-crit
 - **Company:** CACHELINES ([https://cachelines.github.io/](https://cachelines.github.io/))
 - **Founder / Software Architect / Product Engineer:** Atif Syed ([https://iatifsyed.github.io/](https://iatifsyed.github.io/))
 - **WhatsApp Support:** [+92 300 4860591](https://wa.me/923004860591)
-- **Current Status:** Milestone 9 (Security Hardening + Testing + Production Build) Complete / Frozen. 267/267 Automated Tests Passing. 0 Analyzer Issues. Database Schema v7. Native Windows Release Binary Verified.
+- **Current Status:** Milestones 1–9 Complete. 275/275 Automated Tests Passing. 0 Analyzer Issues. Database Schema v7. Native Windows Release & Production Installer Verified.
 
 ---
 
@@ -681,13 +681,13 @@ A dedicated 5-tab administrative console:
    - Standard unencrypted SQLite v7 is currently employed. Database file encryption via SQLCipher remains an honest production limitation (no home-made encryption used).
 6. **Platform Release Hardening:**
    - **Android**: `android:allowBackup="false"` prevents local extraction; `android:usesCleartextTraffic="false"` prevents cleartext HTTP; background location tracking is strictly forbidden.
-   - **Windows**: Native release build compiled and verified: `build\windows\x64\runner\Release\beatbook.exe`.
+   - **Windows**: Native release build compiled and verified: `build\windows\x64\runner\Release\beatbook.exe` (SHA-256: `087FC36C1B76861AD71AE910401484240C8000861EDC43B57906BD44A09CCAF1`). Standalone distribution package (`CACHELINES_v1.0.0_Windows_x64/`), portable archive (`CACHELINES_v1.0.0_Windows_x64.zip`, SHA-256: `48F283B109E2BD2C304301EF300D257F346F19F57B2BDA5A7BCE1560CCC1AA16`), and Inno Setup production installer (`CACHELINES_v1.0.0_Windows_x64_Installer.exe`, SHA-256: `EC411A45C67476D08718BE44B58ADCC61B4F716FA717F3D88AFD230C985CA98A`) verified. Authenticode signing status: `NotSigned` (Pending external production certificate; SmartScreen unrecognized publisher warning expected until signed). Clean Windows installation: PENDING — isolated clean Windows environment unavailable.
 
 ---
 
 ## 19. Running the Application & Tests
 
-### Execute Full Test Suite (267 Tests):
+### Execute Full Test Suite (275 Tests):
 ```powershell
 & "C:\Users\IamAt\.puro\envs\stable\flutter\bin\flutter.bat" test
 ```
